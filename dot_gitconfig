@@ -1,0 +1,5 @@
+[safe]
+	directory = /etc/nixos/
+[user]
+	email = thereiswindresistnace@proton.me
+	name = resistingwind
