@@ -3,9 +3,17 @@
 ------------------
 hl.monitor({
     output   = "eDP-1",
-    mode     = "1920x1080@60",
+    mode     = "preferred",
     position = "0x0",
     scale    = "1",
+})
+
+hl.monitor({
+    output   = "",
+    mode     = "preferred",
+    position = "auto",
+    scale    = "1",
+		mirror   = "eDP-1",
 })
 
 
@@ -23,9 +31,9 @@ local screenshot  = "hyprshot -m region --clipboard"
 -------------------
 -- See https://wiki.hypr.land/Configuring/Basics/Autostart/
 
- hl.on("hyprland.start", function () 
-	 
- end)
+hl.on("hyprland.start", function () 
+	hl.exec_cmd("hyprpaper") 
+end)
 
 
 -------------------------------
